@@ -20,10 +20,25 @@
 
 </head>
 <body>
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<div id="google_translate_element"></div>
+		<div class=buttons>
+			<button id=play></button> &nbsp;
+			<button id=pause></button> &nbsp;
+			<button id=stop></button>
+		</div>
 	<div class="row">
 		<div class="col-lg-4">
 			<form>
+				<article>
 				<div id="q1" class="layer col-lg-4">
+					
 					<label for="qq1">What is the date on which the employer wishes to send this letter of offer?</label>
 					<div class="wrap-input100">
 				   <input id="qq1" class="input100" type="date" name="space_for_the_date" placeholder="04-03-2020" onchange="date_fill(this.value)">
@@ -151,7 +166,7 @@
 
 
 			
-
+			</article>
 			</form>
 		</div>
 		<div class="col-lg-8" id="box_for_the_form">
