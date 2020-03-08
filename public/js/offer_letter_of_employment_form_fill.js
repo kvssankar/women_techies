@@ -87,3 +87,47 @@ function sal_fill(yummy_sal)
 		"background-color" : "yellow",
 	});
 }
+
+var i=1;
+var f;
+var before;
+var after;
+
+function nextpage(){
+    console.log(i);
+    if(i<8){
+        f="q"+i;
+        before=document.getElementById(f);
+        before.style.display="none";
+            // t2
+            // .fromTo(before,1,{
+                 
+            //      clipPath:"circle(100% at 50% 50%)",
+            //     opacity:1,
+            //      ease: "Power2.out"
+            // },{
+            //      scale:1
+            //  })
+            //  .to(before,1,{
+            //      display:"none",
+            //      clipPath:"circle(0% at 50% 50%)",
+            //      opacity:0,
+            //      ease: "Power2.out"
+            //  },'-=.85');
+             
+    }
+    console.log(i);
+    if(i<9){
+        i++;
+        console.log(i);
+        f="q"+i;
+        after=document.getElementById(f);
+        after.style.display="flex";
+        console.log(after.style.display);
+    }
+    console.log(i);
+    if(i==8){
+        i=1;
+        document.querySelector('#banner').style.filter="blur(0)";
+    }
+}

@@ -6,12 +6,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="/css/offer_letter_of_employment_form_fill.css">
-	<style type="text/css">
-		div
-		{
-			border:2px solid red;
-		}
-	</style>
+
 	<!-- JQUERY -->
 	<script
 		  src="https://code.jquery.com/jquery-3.4.1.js"
@@ -28,46 +23,144 @@
 	<div class="row">
 		<div class="col-lg-4">
 			<form>
-				<p>What is the date on which the employer wishes to send this letter of offer?</p>
-				<input type="date" name="space_for_the_date" placeholder="04-03-2020" onchange="date_fill(this.value)">
+				<div id="q1" class="layer col-lg-4">
+					<label for="qq1">What is the date on which the employer wishes to send this letter of offer?</label>
+					<div class="wrap-input100">
+				   <input id="qq1" class="input100" type="date" name="space_for_the_date" placeholder="04-03-2020" onchange="date_fill(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq2">What is the full name of the representative of the employer who is offering the position?</label>
+					<div class="wrap-input100">
+				<input id="qq2" class="input100" type="text" placeholder="Janesh Rohira" name="space_for_representative_of_the_employer_who_is_offering_the_position" onchange="rep_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq3">What is the company name of the employer?</label>
+					<div class="wrap-input100">
+				<input id="qq3" class="input100" type="text" name="space_for_company_name_of_the_employer" placeholder="Kshitij Pvt Lmt" onchange="company_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+				
+				<div class="layer col-lg-4" id="q2">
+					<label for="qq4">What is the employer's full business address?</label>
+					<div class="wrap-input100">
+				   <input id="qq4" class="input100" type="text" name="space_for_employers_full_business_address" placeholder="Vaishali , East delhi" onchange="employer_add(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq5">What is the new employee's full name?</label>
+					<div class="wrap-input100">
+				<input id="qq5" class="input100" type="text" name="space_for_the_employees_full_name" placeholder="Rajat Yadav" onchange="employee_name(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq6">What is the new employee's contact address?</label>
+					<div class="wrap-input100">
+				<input id="qq6" class="input100" type="text" name="space_for_the_new_employee_contact_address" placeholder="Jubliee Hills , Bangalore" onchange="employee_add(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+				
 
-				<p>What is the full name of the representative of the employer who is offering the position?</p>
-				<input type="text" placeholder="Janesh Rohira" name="space_for_representative_of_the_employer_who_is_offering_the_position" onchange="rep_fill(this.value)">
+				<div id="q3" class="layer col-lg-4">
+					<label for="">Is the employee being hired on a part-time or full-time basis?</label>
+					<div class="wrap-input100">
+						<input type="radio" name="part_or_full_time" value="full-time">Full time
+						<input type="radio" name="part_or_full_time" value="part-time">Part-time
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq8">What will the new employee's job title be?</label>
+					<div class="wrap-input100">
+				<input id="qq2" class="input100" type="input" name="new_employees_job_title" placeholder="Software Developer Engineer" onchange="job_title_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq9">What will be the new employee's first day of work?</label>
+					<div class="wrap-input100">
+				<input id="qq9" class="input100" type="date" name="new_employees_first_day_of_work" onchange="first_day_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+			
 
-				<p>What is the company name of the employer?</p>
-				<input type="text" name="space_for_company_name_of_the_employer" placeholder="Kshitij Pvt Lmt" onchange="company_fill(this.value)">
+				<div id="q4" class="layer col-lg-4">
+					<label for="qq10">What is the address at which the new employee will be required to work?</label>
+					<div class="wrap-input100">
+				   <input id="qq10" class="input100" type="text" placeholder="Andheri , Mumbai" name="address_at_which_the_new_employee will_be_required_to_work" onchange="add_of_work_fill(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq11">What will the employee's annual salary be (in Indian Rupees)?</label>
+					<div class="wrap-input100">
+				<input id="qq11" class="input100" type="text" placeholder="Enter a number" name="employees_annual_salary" onchange="sal_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="">Will there be a probation period?</label>
+					<div class="wrap-input100">
+						<input type="radio" name="if_no_probation_remove_this" value="Yes">Yes
+						<input type="radio" name="if_no_probation_remove_this" value="No">No
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
 
-				<p>What is the employer's full business address?</p>
-				<input type="text" name="space_for_employers_full_business_address" placeholder="Vaishali , East delhi" onchange="employer_add(this.value)">
 
-				<p>What is the new employee's full name?</p>
-				<input type="text" name="space_for_the_employees_full_name" placeholder="Rajat Yadav" onchange="employee_name(this.value)">
 
-				<p>What is the new employee's contact address?</p>
-				<input type="text" name="space_for_the_new_employee_contact_address" placeholder="Jubliee Hills , Bangalore" onchange="employee_add(this.value)">
 
-				<p>Is the employee being hired on a part-time or full-time basis?</p>
-				<input type="radio" name="part_or_full_time" value="full-time">Full time
-				<input type="radio" name="part_or_full_time" value="part-time">Part-time
+			
 
-				<p>What will the new employee's job title be?</p>
-				<input type="input" name="new_employees_job_title" placeholder="Software Developer Engineer" onchange="job_title_fill(this.value)">
-
-				<p>What will be the new employee's first day of work?</p>
-				<input type="date" name="new_employees_first_day_of_work" onchange="first_day_fill(this.value)">
-
-				<p>What is the address at which the new employee will be required to work?</p>
-				<input type="text" placeholder="Andheri , Mumbai" name="address_at_which_the_new_employee will_be_required_to_work" onchange="add_of_work_fill(this.value)">
-
-				<p>What will the employee's annual salary be (in Indian Rupees)?</p>
-				<input type="text" placeholder="Enter a number" name="employees_annual_salary" onchange="sal_fill(this.value)">
-
-				<p>Will there be a probation period?</p>
-				<input type="radio" name="if_no_probation_remove_this" value="Yes">Yes
-				<input type="radio" name="if_no_probation_remove_this" value="No">No
 			</form>
 		</div>
 		<div class="col-lg-8" id="box_for_the_form">
+			<div class="box ">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+				<span class="span4"></span>
+				<div class="content">
 			<pre id="output">
 <span class="space_for_representative_of_the_employer_who_is_offering_the_position">________</span>
 <span class="space_for_company_name_of_the_employer">________</span>
@@ -149,6 +242,8 @@ Date
 
 			</pre>
 		</div>
+		</div>
+	</div>
 	</div>
 	<div id="editor"></div>
 	<button id='save'>Generate PDF</button>
